@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 
 const Forms = props => {
+  //const [addNewMember] = useState([]);
   //console.log("this is props",props)
    const  [myTeam, setMyTeam]= useState({
-    Name:"",
-    Email:"",
-    Role:"",
+    name:"",
+    email:"",
+    role:"",
   });
 const handleChanges = e => {
    setMyTeam({...myTeam, [e.target.name]: e.target.value});
@@ -14,20 +15,21 @@ const handleChanges = e => {
 };
 const submitForm = e => {
     e.preventDefault();
- 
-   props.addNewMember(myTeam);
-    setMyTeam({Name:"", Email:"", Role:""});
+  //.push(props.)
+   props.newMem(myTeam);
+   
+    setMyTeam({name:"", email:"", role:""});
 };
 return (
     <form onSubmit={submitForm}>
         <label htmlFor="name">  Name:  </label>
         <input
-        id="name"
+        id=""
         type="text"
         name="name"
         onChange={handleChanges}
         placeholder="New Team Members Name"
-        value={myTeam.title}
+        value={myTeam.name}
         />
         <lable htmlFor="email">  Email:  </lable>
         <input
