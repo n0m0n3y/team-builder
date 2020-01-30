@@ -15,31 +15,34 @@ const handleChanges = e => {
 const submitForm = e => {
     e.preventDefault();
  
-    props.addNewMember(myTeam);
+   props.addNewMember(myTeam);
     setMyTeam({Name:"", Email:"", Role:""});
 };
 return (
     <form onSubmit={submitForm}>
-        <label htmlFor="Name">Name:</label>
+        <label htmlFor="name">  Name:  </label>
         <input
+        id="name"
         type="text"
         name="name"
         onChange={handleChanges}
         placeholder="New Team Members Name"
         value={myTeam.title}
         />
-        <lable htmlFor="Email">Email:</lable>
+        <lable htmlFor="email">  Email:  </lable>
         <input
+        id="email"
         type="text"
-        name="Email"
+        name="email"
         placeholder="Members Email"
         onChange ={handleChanges}
         value={myTeam.email}
         />
-        <lable htmlFor="Role">Role:</lable>
+        <lable htmlFor="role"> Role:  </lable>
         <input 
+        id="role"
         type="text"
-        name="Role"
+        name="role"
         placeholder="Members Role"
         onChange ={handleChanges}
         value={myTeam.role}
