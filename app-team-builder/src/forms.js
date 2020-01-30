@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 const Forms = props => {
-  console.log("this is props",props)
+  //console.log("this is props",props)
    const  [myTeam, setMyTeam]= useState({
     Name:"",
     Email:"",
@@ -23,13 +23,13 @@ return (
         <label htmlFor="Name">Name:</label>
         <input
         type="text"
-        name="Name"
+        name="name"
         onChange={handleChanges}
         placeholder="New Team Members Name"
         value={myTeam.title}
         />
         <lable htmlFor="Email">Email:</lable>
-        <textarea 
+        <input
         type="text"
         name="Email"
         placeholder="Members Email"
@@ -37,14 +37,22 @@ return (
         value={myTeam.email}
         />
         <lable htmlFor="Role">Role:</lable>
-        <textarea 
+        <input 
         type="text"
         name="Role"
         placeholder="Members Role"
         onChange ={handleChanges}
         value={myTeam.role}
         />
-        <button type ="submit">ADD MEMBER</button>
+        
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding:"5%"
+        }}>
+        <button  className ="submit" type ="submit">ADD MEMBER</button>
+        </div>
         </form>
 );
 };
