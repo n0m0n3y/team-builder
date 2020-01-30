@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const teamMeamber = props => {
+const TeamMembers = props => {
     return(
     <div className="newMem">
     {props.newMemList.map(info=>{
@@ -24,4 +24,4 @@ const teamMeamber = props => {
 
 
 
-export default teamMeamber;
+export default TeamMembers;

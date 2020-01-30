@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 
 const Forms = props => {
+  console.log("this is props",props)
    const  [myTeam, setMyTeam]= useState({
     Name:"",
     Email:"",
     Role:"",
   });
 const handleChanges = e => {
-   setMyTeam({...myTeam, [e.target.Name]: e.target.value});
+   setMyTeam({...myTeam, [e.target.name]: e.target.value});
    console.log(myTeam);
 };
 const submitForm = e => {
